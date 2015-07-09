@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CodeConnect.TestDemo.MSTest
 {
     [TestClass]
-    public class MSTestClass
+    public class MSTestClass : IDisposable
     {
         public MSTestClass()
         {
@@ -45,6 +45,11 @@ namespace CodeConnect.TestDemo.MSTest
         static public void ClassCleanup()
         {
             System.Diagnostics.Debug.WriteLine("MSTestClass.ClassCleanup");
+        }
+
+        public void Dispose()
+        {
+            System.Diagnostics.Debug.WriteLine("MSTestClass.Dispose");
         }
     }
 }

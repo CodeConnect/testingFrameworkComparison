@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace CodeConnect.TestDemo.NUnit
 {
     [TestFixture]
-    public class NUnitTestClass
+    public class NUnitTestClass : IDisposable
     {
         public NUnitTestClass()
         {
@@ -45,6 +45,11 @@ namespace CodeConnect.TestDemo.NUnit
         public void TestFixtureTearDown()
         {
             System.Diagnostics.Debug.WriteLine("NUnitTestClass.TestFixtureTearDown");
+        }
+
+        public void Dispose()
+        {
+            System.Diagnostics.Debug.WriteLine("NUnitTestClass.Dispose");
         }
     }
 }
