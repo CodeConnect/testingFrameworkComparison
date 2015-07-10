@@ -23,6 +23,12 @@ namespace CodeConnect.TestDemo.NUnit
             System.Diagnostics.Debug.WriteLine("NUnitTestClass.SetUp");
         }
 
+        [SetUp]
+        public void SetUp2()
+        {
+            System.Diagnostics.Debug.WriteLine("NUnitTestClass.SetUp2");
+        }
+
         [Test]
         public void TestMethod1()
         {
@@ -39,6 +45,12 @@ namespace CodeConnect.TestDemo.NUnit
         public void TearDown()
         {
             System.Diagnostics.Debug.WriteLine("NUnitTestClass.TearDown");
+        }
+
+        [TearDown]
+        public void TearDown2()
+        {
+            System.Diagnostics.Debug.WriteLine("NUnitTestClass.TearDown2");
         }
 
         [TestFixtureTearDown]
